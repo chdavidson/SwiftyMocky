@@ -151,15 +151,6 @@ private extension ExpressibleByDictionaryLiteral where Key: Hashable {
     }
 }
 
-extension Optional: ExpressibleByDictionaryLiteral where Wrapped: ExpressibleByDictionaryLiteral, Wrapped.Key: Hashable {
-    public typealias Key = Wrapped.Key
-    public typealias Value = Wrapped.Value
-
-    public init(dictionaryLiteral elements: (Key, Value)...) {
-        self = .some(Wrapped.init(elements))
-    }
-}
-
 extension Parameter: ExpressibleByDictionaryLiteral where ValueType: ExpressibleByDictionaryLiteral, ValueType.Key: Hashable {
     public typealias Key = ValueType.Key
     public typealias Value = ValueType.Value
