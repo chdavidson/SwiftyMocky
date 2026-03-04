@@ -1,9 +1,9 @@
 PODS:
-  - Sourcery (2.2.2):
-    - Sourcery/CLI-Only (= 2.2.2)
-  - Sourcery/CLI-Only (2.2.2)
+  - Sourcery (2.3.0):
+    - Sourcery/CLI-Only (= 2.3.0)
+  - Sourcery/CLI-Only (2.3.0)
   - SwiftyMocky (4.2.0):
-    - Sourcery (= 2.2.2)
+    - Sourcery (= 2.3.0)
 
 DEPENDENCIES:
   - SwiftyMocky (from `./`)

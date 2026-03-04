@@ -8,7 +8,7 @@ class ParameterWrapper {
         let typeString = "\(type.actualTypeName ?? type)"
         let isEscaping = typeString.contains("@escaping")
         let isOptional = (type.actualTypeName ?? type).isOptional
-        if parameter.isClosure && !isEscaping && !isOptional {
+        if parameter.isClosure && !isEscaping &&!isOptional {
             return "\(nestedType).any"
         } else {
             return "\(nestedType).value(\(escapedName))"
